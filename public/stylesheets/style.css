@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300;1,400;1,700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.container_1
+{
+    margin-top: auto;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    max-width: 100%;
+    height: calc(100vh - 60px);
+    background: #fff;
+    display: flex;
+}
+
+.container_1 .leftSide
+{
+    position: relative;
+    flex: 20%;
+    background: #2c2e2e;
+    border-right: 2px solid rgb(134, 128, 128);
+}
+.container_1 .rightSide
+{
+    position: relative;
+    flex: 50%;
+    background: #e67ae0;
+}
+
+.container_1 .us2
+{
+    background: #2881aa;
+}
+
+
+.container_1 .rightSide::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00090c;
+    opacity: 0.5;
+    
+}
+.container_1 .note
+{
+    position: relative;
+    flex: 15%;
+    background-color: #434646;
+}
+.header_1
+{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #222221;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+.userimg
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+.cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.nav_icons
+{
+    display: flex;
+}
+.nav_icons li 
+{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2em;
+    margin-left: 22px;
+}
+.search_chat
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #cdd7d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+.search_chat div
+{
+    width: 100%;
+}
+.search_chat div input
+{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #fff;
+    padding: 6px;
+    height: 36px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+.search_chat div ion-icon
+{
+    position: absolute;
+    left: 30px;
+    top: 14px;
+    font-size: 1.2em;
+}
+.chatlist
+{
+    position: relative;
+    height: calc(100% - 120px);
+    overflow-y: auto;
+    
+   
+
+}
+.chatlist .block
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    border-bottom: 5px solid rgba(0,0,0,0.06);
+    border-radius: 15px;
+}
+
+.chatlist .block:hover
+
+{
+    background: #464747;
+}
+
+.chatlist .block .nav_icons
+{
+    display: flex;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2em;
+    padding: 0 20px;
+    align-items: center;
+}  
+
+.chatlist  .block  .details   h4
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    color: rgb(248, 244, 244);
+}
+
+.accordion-item .accordion-header
+{
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background: #71b9b9;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+.accordion-item.active .arrow
+{
+    transform: rotate(180deg);
+}
+.accordion-item.active .accordion-header
+{
+    background: #8d9296;
+
+}
+.arrow{
+    transition: all 0.5s;
+}
+
+.accordion-body
+{   
+    padding: 10px 10px ;
+    color: #fff;
+    display: none;
+    background: #323331;
+    cursor: pointer;
+    
+}
+.accordion-body h4
+{
+    display: flex;
+    
+    align-items: center;
+    padding: 13px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgba(235, 211, 211, 0.06);
+}
+.chatlist .accordion-body h4:hover
+
+{
+    background: #464747;
+}
+.userimgg
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.message_p
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message_p p 
+{
+    color: rgb(27, 27, 27);
+    display:  -webkit-box;
+    
+}
+
+.imgText
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.imgText h4
+{
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-left: 15px;
+    color: #f0f0f0;
+
+}
+.imgText h4 span
+ {
+    font-size: 0.8em;
+    color: #ecf1f3;
+}
+.chatBox
+{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow-y: auto;
+    background-color: #020d11;
+}
+.message
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.message p
+{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 60%;
+    padding: 12px;
+    background: #4d4aee;
+    border-radius: 10px;
+    font-size: 1em;
+    color:#fff;
+}
+
+.message p span
+{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0.7;
+
+}
+.my_mess
+{
+    justify-content: flex-end;
+}
+.friend_mess
+{
+    justify-content: flex-start;
+
+}
+.friend_mess p
+{
+    background: rgb(163, 160, 160);
+    text-align: left;
+}
+
+.chatbox_input
+{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #635c5c;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+}
+.chatbox_input ion-icon:nth-child(1)
+{
+    margin-right: 5px;
+}
+.chatbox_input ion-icon
+
+{
+    cursor: pointer;
+    font-size: 1.8em;
+    color: #93968d;
+}
+.chatBox .btn_send{
+    position: relative;
+    width: 90%;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1em;
+}
+/*btn_ send  */
+.frm{
+    display: flex;  
+}
+.frm input{
+    flex: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    font-size: 16px;
+}
+.frm .btn{
+    width: 100px;
+    font-size: 18px;
+    outline: none;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 10%;
+}
+.frm .btn:hover{
+    background-color: blue;
+    transition: 0.2s ease;
+}
+.frm .inp
+{
+    position: relative;
+    width: 90%;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1em;
+}
+.container .right
+{
+    display: flex;
+    position: relative;
+    height: calc(100% - 120px);
+    overflow-y: auto;
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.pngonl
+{
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 100px;
+   
+}
+.pngonl .cover2
+
+{
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.list .btn_logout{
+    background-color: rgb(228, 48, 48); padding: 10px 15px; color: white; border: none; border-radius: 10%
+}
+.list .btn_logout:hover{
+   background-color: rgb(219, 141, 141);
+}

@@ -1,0 +1,166 @@
+
+<section class="vh-100 gradient-custom">
+<div class="container_1">
+        <div class="leftSide"> 
+            <div class="header_1">
+                <div class="userimg">
+                    <img src="/images/Jennie.jfif" class="cover">
+                </div>
+                <ul class="nav_icons">
+                    <li><ion-icon name="notifications-off"></ion-icon></li>
+                    <li><ion-icon name="chatbubble-ellipses-outline"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical-circle-sharp"></ion-icon></li>
+                </ul>
+            </div>
+            <div class="search_chat">
+                <div>
+                <input type="text" placeholder="Search or start new chat">
+                <ion-icon name="search"></ion-icon>
+            </div>
+            
+            </div>
+            <div class="chatlist">
+                <div class="block ">
+                    <div class="nav_icons">
+                        <ion-icon name="timer"></ion-icon>
+                    </div>
+                    <div  class="details">
+                        <h4>All Updates</h4>     
+                    </div>
+                </div>
+                <div class="block ">
+                    <div class="nav_icons">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+                    <div  class="details">
+                        <h4>Members</h4>
+                    </div>
+                </div>
+                <div class="block ">
+                    <div class="nav_icons">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </div>
+                    <div class="details">
+                        <h4>Settings</h4>       
+                    </div>
+                </div>
+
+              <script>
+                $(document).ready(function(){
+                    $('.accordion-item.active .accordion-body').slideDown();
+                    $('.accordion-header').click(function() {
+                      $(this).parent().toggleClass('active');
+                      $(this).parent().children('.accordion-body').slideToggle();
+                    });  
+                    
+                });
+              </script>
+
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h2>MESSAEGS</h2>
+                            <ion-icon class="arrow" name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <div class="accordion-body">
+                            <h4><div class="userimgg">
+                                <img src="/images/Jennie.jfif" class="cover">
+                            </div>Jennie</h4>
+                           
+                            <h4> <div class="userimgg">
+                                <img src="/images/Jisso.jfif" class="cover">
+                            </div>Jisso </h4>
+                            
+                            <h4><div class="userimgg">
+                                <img src="/images/Rose.jfif" class="cover">
+                            </div>Rose</h4>
+                            
+                            <h4><div class="userimgg">
+                                <img src="/images/Lisa.jfif" class="cover">
+                            </div>Lisa</h4>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="rightSide">
+            <div class="header">
+                <div class="imgText">
+                    <div class="userimg">
+                        <img src="/images/Jennie.jfif" class="cover">
+                    </div>
+                    <H4>Jennie<br><span style="color: rgb(26, 194, 26);">online</span></H4>
+                </div>
+            </div>
+            
+            <div class="chatBox">
+                {{#each users}}
+                {{!-- <p class="message" id="chatBox">{{uid}}</p> --}}
+                    {{#if this.uid}}
+                        <div class="message my_mess" id="chat">
+                            <p>
+                                {{this.msg}}
+                            </p>
+                        </div>
+                    {{else}}
+                        <div class="message friend_mess">
+                            <p>
+                                {{this.msg}}
+                            </p>
+                        </div>
+                    {{/if}}
+                {{/each}}
+            
+            </div>
+            <div class="chatbox_input">
+                <ion-icon name="happy-outline"></ion-icon>
+                <ion-icon name="attach"></ion-icon>
+               
+                <ion-icon name="mic"></ion-icon>
+                <div class="btn_send">
+                    <form class="frm">
+                        <input class="inp" type="text" name="" id="msg" placeholder="Type a message">
+                        <button class="btn" onclick="sendMsg('1')">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="leftSide"> 
+            <div class="chatlist"> 
+
+                    <div class="accordion-item active  ">
+                        <div class="accordion-header">
+                            <h2>Channel Details</h2>
+                            <ion-icon name="close-circle-outline"></ion-icon>
+  
+                        </div>
+                      
+                            <div class="list">
+                            <div class="pngonl">
+                                <img src="/images/Jennie.jfif" class="cover2"> 
+                            </div> 
+                           
+                            <div class="pngonl">
+                                <img src="/images/Lisa.jfif" class="cover2">
+                            </div>   
+                    
+                    </div>
+                    <div class="list">
+                        <div class="pngonl">
+                            <img src="/images/Rose.jfif" class="cover2"> 
+                        </div> 
+                       
+                        <div class="pngonl">
+                            <img src="/images/Jisso.jfif" class="cover2">
+                        </div> 
+                </div>
+                        </div>
+                
+                    </div>
+                            <div class="list">
+                            <form action="/logout">
+                                <button class="btn_logout">Log out</button>
+                            </form>
+                        </div>
+        </div>
+</div>
+</section>
