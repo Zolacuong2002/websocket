@@ -1,6 +1,8 @@
 {
   "scripts": {
+    "deploy": "npm run build && gh-pages -d dist -b master",
     "start": "node ./index"
+    
   },
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.5",
