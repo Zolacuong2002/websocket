@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "npm run build && gh-pages -d dist -b master",
+    "deploy": "npm run build && gh-pages -d dist -b main",
     "start": "node ./index"
     
   },
